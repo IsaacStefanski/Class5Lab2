@@ -4,7 +4,7 @@ package task1;
  *
  * @author Isaac
  */
-public class Class5Lab2 {
+public class Startup {
 
     /**
      * @param args the command line arguments
