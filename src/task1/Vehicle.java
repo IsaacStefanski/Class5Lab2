@@ -11,7 +11,6 @@ package task1;
  */
 public class Vehicle {
     private String manufacturer;
-    private boolean registrationRequired;
     private boolean running;
     private boolean off;
     
@@ -31,14 +30,6 @@ public class Vehicle {
         }
     }
 
-    public boolean isRegistrationRequired() {
-        return registrationRequired;
-    }
-
-    public void setRegistrationRequired(boolean registrationRequired) {
-        this.registrationRequired = registrationRequired;
-    }
-
     public boolean isRunning() {
         return running;
     }
@@ -54,6 +45,4 @@ public class Vehicle {
     public void setOff(boolean off) {
         this.off = off;
     }
-    
-    
 }
