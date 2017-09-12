@@ -15,8 +15,8 @@ public class Vehicle {
     private boolean running;
     private boolean off;
     
-    public String getPowerSource(){
-        return "motor";
+    public double get0To60Time(){
+        return 0.00;
     }
 
     public String getManufacturer() {
