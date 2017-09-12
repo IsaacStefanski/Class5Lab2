@@ -24,7 +24,11 @@ public class Vehicle {
     }
 
     public void setManufacturer(String manufacturer) {
-        this.manufacturer = manufacturer;
+        if(manufacturer != null){
+            this.manufacturer = manufacturer;
+        } else {
+            throw new IllegalArgumentException("Manufacturer is required");
+        }
     }
 
     public boolean isRegistrationRequired() {
