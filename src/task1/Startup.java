@@ -14,7 +14,8 @@ public class Startup {
         myAventador.setManufacturer("Lamborghini");
         myAventador.setModel("Aventador");
         myAventador.setYear(2017);
-        System.out.println(myAventador.getModel() + " 0-60 MPH Time: " + myAventador.get0To60Time());
+        myAventador.setEngineClassification("V12");
+        System.out.println(myAventador.getModel() + " 0-60 MPH Time for " + myAventador.getEngineClassification() + " Engine: " + myAventador.get0To60Time());
         myAventador.setBaseMSRP(399500.00);
         myAventador.setDealerName("Lamborghini Gold Coast Chicago");
         myAventador.setLicensePlate("789-XYZ");

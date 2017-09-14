@@ -21,8 +21,27 @@ public class SuperCar extends Vehicle{
     private double baseMSRP;
     
     @Override
-    public double get0To60Time(){
-        return 2.4;
+    public String get0To60Time(){
+        switch (engineClassification.toLowerCase()){
+            case "4 cylinder":
+                return "7.0+ seconds";
+            case "v6":
+                return "5.1 - 8.0 seconds";
+            case "v8":
+                return "3.7 - 7.6 seconds";
+            case "v10":
+                return "2.9 - 6.6 seconds";
+            case "v12":
+                return "2.4 - 4.9 seconds";
+            case "w12":
+                return "2.2 - 4.4 seconds";
+            case "electric":
+            case "electric motor":
+            case "ev":
+                return "2.4 - 12.0 seconds";
+            default:
+                return "Engine Classification Required (4 Cylinder, V6, V8, V10, V12, W12, or electric motor)";
+        }
     }
 
     public int getNumDoors() {
@@ -93,7 +112,7 @@ public class SuperCar extends Vehicle{
         if(engineClassification != null){
             this.engineClassification = engineClassification;
         } else {
-            throw new IllegalArgumentException("It has to have an engine or electric motor");
+            throw new IllegalArgumentException("It has to have an engine (4 Cylinder, V6, V8, V10, V12, or W12) or electric motor");
         }
     }
 

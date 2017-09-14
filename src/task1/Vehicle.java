@@ -14,8 +14,8 @@ public class Vehicle {
     private boolean running;
     private boolean off;
     
-    public double get0To60Time(){
-        return 0.00;
+    public String get0To60Time(){
+        return "-.-- seconds";
     }
 
     public String getManufacturer() {
