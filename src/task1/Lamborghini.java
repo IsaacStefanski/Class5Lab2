@@ -14,6 +14,13 @@ public class Lamborghini extends SuperCar {
     private String licensePlate;
     private String vin;
 
+    public Lamborghini(int year, String model, String transmission) {
+        setManufacturer("Lamborghini");
+        setModel(model);
+        setYear(year);
+        setTransmissionType(transmission);
+    }
+
     public String getDealerName() {
         return dealerName;
     }

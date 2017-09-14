@@ -150,5 +150,16 @@ public class SuperCar extends Vehicle{
         } else {
             throw new IllegalArgumentException("Super cars are normally pretty expensive");
         }
-    }    
+    }
+
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        
+        sb.append(getYear() + " " + getManufacturer() + " " + getModel());
+        sb.append("\nEngine Specs: " + getEngineClassification() + " " + getHorsepower() + "hp " + getTorque() + "lb-ft");
+        sb.append("\nTransmission: " + getTransmissionType());
+        sb.append("\nOriginal Base MSRP: $" + getBaseMSRP());
+        
+        return sb.toString();
+    }
 }
