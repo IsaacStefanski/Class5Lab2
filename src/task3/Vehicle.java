@@ -15,12 +15,20 @@ public interface Vehicle {
     public abstract String getManufacturer();
 
     public abstract void setManufacturer(String manufacturer);
+    
+    public abstract String getModel();
+
+    public abstract void setModel(String model);
+    
+    public abstract int getYear();
+
+    public abstract void setYear(int year);
+    
+    public abstract double getBaseMSRP();
+
+    public abstract void setBaseMSRP(double baseMSRP);
 
     public abstract boolean isRunning();
 
     public abstract void setRunning(boolean running);
-
-    public abstract boolean isOff();
-
-    public abstract void setOff(boolean off);
 }

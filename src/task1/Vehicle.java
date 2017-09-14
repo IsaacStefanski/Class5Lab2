@@ -11,8 +11,10 @@ package task1;
  */
 public class Vehicle {
     private String manufacturer;
+    private String model;
+    private int year;
+    private double baseMSRP;
     private boolean running;
-    private boolean off;
     
     public String get0To60Time(){
         return "-.-- seconds";
@@ -38,11 +40,39 @@ public class Vehicle {
         this.running = running;
     }
 
-    public boolean isOff() {
-        return off;
+    public String getModel() {
+        return model;
     }
 
-    public void setOff(boolean off) {
-        this.off = off;
+    public void setModel(String model) {
+        if(model != null){
+            this.model = model;
+        } else {
+            throw new IllegalArgumentException("Model is required");
+        }
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        if(year > 1920){
+            this.year = year;
+        } else {
+            throw new IllegalArgumentException("Year must be newer than 1920");
+        }
+    }
+
+    public double getBaseMSRP() {
+        return baseMSRP;
+    }
+
+    public void setBaseMSRP(double baseMSRP) {
+        if(baseMSRP >= 60000.00){
+            this.baseMSRP = baseMSRP;
+        } else {
+            throw new IllegalArgumentException("Super cars are normally pretty expensive");
+        }
     }
 }

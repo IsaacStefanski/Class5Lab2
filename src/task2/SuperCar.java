@@ -16,9 +16,6 @@ public class SuperCar extends Vehicle{
     private int horsepower;
     private int torque;
     private String engineClassification;
-    private String model;
-    private int year;
-    private double baseMSRP;
     
     @Override
     public String get0To60Time(){
@@ -112,46 +109,10 @@ public class SuperCar extends Vehicle{
         if(engineClassification != null){
             this.engineClassification = engineClassification;
         } else {
-            throw new IllegalArgumentException("It has to have an engine or electric motor");
+            throw new IllegalArgumentException("It has to have an engine (4 Cylinder, V6, V8, V10, V12, or W12) or electric motor");
         }
     }
 
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        if(model != null){
-            this.model = model;
-        } else {
-            throw new IllegalArgumentException("Model is required");
-        }
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        if(year > 1920){
-            this.year = year;
-        } else {
-            throw new IllegalArgumentException("Year must be newer than 1920");
-        }
-    }
-
-    public double getBaseMSRP() {
-        return baseMSRP;
-    }
-
-    public void setBaseMSRP(double baseMSRP) {
-        if(baseMSRP >= 60000.00){
-            this.baseMSRP = baseMSRP;
-        } else {
-            throw new IllegalArgumentException("Super cars are normally pretty expensive");
-        }
-    }
-    
     public String toString(){
         StringBuilder sb = new StringBuilder();
         
