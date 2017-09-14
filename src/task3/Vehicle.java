@@ -10,7 +10,7 @@ package task3;
  * @author Isaac
  */
 public interface Vehicle {
-    public abstract double get0To60Time();
+    public abstract String get0To60Time();
 
     public abstract String getManufacturer();
 

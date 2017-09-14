@@ -14,7 +14,7 @@ public abstract class Vehicle {
     private boolean running;
     private boolean off;
     
-    public abstract double get0To60Time();
+    public abstract String get0To60Time();
 
     public String getManufacturer() {
         return manufacturer;
