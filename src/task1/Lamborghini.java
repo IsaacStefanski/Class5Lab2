@@ -12,7 +12,6 @@ package task1;
 public class Lamborghini extends SuperCar {
     private String dealerName;
     private String licensePlate;
-    private String vin;
 
     public Lamborghini(int year, String model, String transmission) {
         setManufacturer("Lamborghini");
@@ -42,18 +41,6 @@ public class Lamborghini extends SuperCar {
             this.licensePlate = licensePlate;
         } else {
             throw new IllegalArgumentException("License plate is required");
-        }
-    }
-
-    public String getVin() {
-        return vin;
-    }
-
-    public void setVin(String vin) {
-        if((vin != null) && ((vin.length() == 17 && this.getYear() >= 1981) || (vin.length() >= 11 && vin.length() <= 17 && this.getYear() < 1981))){
-            this.vin = vin;
-        } else {
-            throw new IllegalArgumentException("VIN is required");
         }
     }   
 }

@@ -15,6 +15,7 @@ public abstract class Vehicle {
     private int year;
     private double baseMSRP;
     private boolean running;
+    private String vin;
     
     public abstract String get0To60Time();
 
@@ -55,10 +56,10 @@ public abstract class Vehicle {
     }
 
     public void setYear(int year) {
-        if(year > 1920){
+        if(year > 1900){
             this.year = year;
         } else {
-            throw new IllegalArgumentException("Year must be newer than 1920");
+            throw new IllegalArgumentException("Year must be newer than 1900");
         }
     }
 
@@ -67,10 +68,22 @@ public abstract class Vehicle {
     }
 
     public void setBaseMSRP(double baseMSRP) {
-        if(baseMSRP >= 60000.00){
+        if(baseMSRP >= 300.00){
             this.baseMSRP = baseMSRP;
         } else {
-            throw new IllegalArgumentException("Super cars are normally pretty expensive");
+            throw new IllegalArgumentException("Base MSRP is required");
+        }
+    }
+    
+    public String getVin() {
+        return vin;
+    }
+
+    public void setVin(String vin) {
+        if((vin != null) && ((vin.length() == 17 && this.getYear() >= 1981) || (vin.length() >= 11 && vin.length() <= 17 && this.getYear() < 1981))){
+            this.vin = vin;
+        } else {
+            throw new IllegalArgumentException("VIN is required");
         }
     }
 }
